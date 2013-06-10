@@ -9,3 +9,6 @@
 
 [Kindle Display for Pi](http://www.ponnuki.net/2012/09/kindleberry-pi/)
 
+[Node.js Webserver Doc](http://nodejs.org/api/http.html)
+
+[Node.js Tutorial](http://www.nodebeginner.org/#server-side-javascript)
