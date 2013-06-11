@@ -1,14 +1,16 @@
 ##JARVIS AI##
 
-* Siri like contol of my Raspberry Pi
-* General Cool Stuff
+I basically use this repository to dump my ideas in / organize my ideas.
+The eventual plan is to make an Master application, that would be cross device and automate many things I do (think mega-Siri), called JARVIS after the (fake) AI in the Iron Man movies.
 
-[Voice Control Guide](http://harizanov.com/2013/03/siri-like-voice-chat-with-raspberry-pi-keep-kids-busy-for-a-while/)
+###Tech/Projects im *Currently* Working On###
+* [Kindle Display for Pi](http://www.ponnuki.net/2012/09/kindleberry-pi/)
+* Tweeting to Twitter from Pi Python script
+* Node.js / HTML5 / CSS3 Custom Webserver
+    * [Node.js Webserver Doc](http://nodejs.org/api/http.html)
+    * [Node.js Tutorial](http://www.nodebeginner.org/#server-side-javascript), I bought the book...
 
-[Kinect for Linux](http://openkinect.org/wiki/Main_Page)
-
-[Kindle Display for Pi](http://www.ponnuki.net/2012/09/kindleberry-pi/)
-
-[Node.js Webserver Doc](http://nodejs.org/api/http.html)
-
-[Node.js Tutorial](http://www.nodebeginner.org/#server-side-javascript)
+###Tech/Projects I'm *going* to Work on in the Future###
+* JARVIS the AI 
+    * [Voice Control Guide](http://harizanov.com/2013/03/siri-like-voice-chat-with-raspberry-pi-keep-kids-busy-for-a-while/)
+    * [Kinect for Linux](http://openkinect.org/wiki/Main_Page)
