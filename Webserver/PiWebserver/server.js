@@ -11,18 +11,24 @@ var url = require("url");
 
 function start(route, handle){
     function onRequest(request, response){
+        var postData = "";
         var pathname = url.parse(request.url).pathname;
         console.log("[Server]Request for " + pathname + " received");
 
-        route(handle, pathname);
+        request.setEncoding("utf8");
+        request.addListener("data", function(postDataChunk){
+            postData += postDataChunk;
+            console.log("[Server]Received POST data chunk '" + postDataChunk + "'");
 
-        response.writeHead(200, {'Content-Type': 'text/html'});
-        response.write("Hello World!");
-        response.end();
+        });
+        request.addListener("end", function(){
+            route(handle, pathname, response, postData);
+        });
+
     }
 
-    http.createServer(onRequest).listen(1337, '127.0.0.1');
-    console.log('[Server]Server started at http://127.0.0.1:1337/');
+    http.createServer(onRequest).listen(8888);
+    console.log('[Server]Server started at http://localhost:8888/');
 
 }
 
