@@ -7,15 +7,22 @@
  */
 
 var http = require('http');
+var url = require("url");
 
-function start(){
-    function onRequest(req, response){
+function start(route, handle){
+    function onRequest(request, response){
+        var pathname = url.parse(request.url).pathname;
+        console.log("[Server]Request for " + pathname + " received");
+
+        route(handle, pathname);
+
         response.writeHead(200, {'Content-Type': 'text/html'});
-        response.end("Hello World!");
+        response.write("Hello World!");
+        response.end();
     }
 
     http.createServer(onRequest).listen(1337, '127.0.0.1');
-    console.log('Server started at http://127.0.0.1:1337/');
+    console.log('[Server]Server started at http://127.0.0.1:1337/');
 
 }
 
