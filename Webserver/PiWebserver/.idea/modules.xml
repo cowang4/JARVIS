@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PiWebserver.iml" filepath="$PROJECT_DIR$/.idea/PiWebserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PiWebapp.iml" filepath="$PROJECT_DIR$/.idea/PiWebapp.iml" />
     </modules>
   </component>
 </project>
