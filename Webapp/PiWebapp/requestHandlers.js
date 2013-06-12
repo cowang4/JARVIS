@@ -9,6 +9,7 @@
 var exec = require("child_process").exec;//unused, for reference later on
 var querystring = require("querystring");
 var fs = require("fs");
+var formidable = require("formidable");
 
 function start(response, postData){
     console.log("[ReqHan]Request handler 'start' was called")
@@ -34,14 +35,29 @@ function start(response, postData){
 
 function upload(response, postData){
     console.log("[ReqHan]Request handler 'upload' was called")
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    response.write("You've sent: " + postData);
-    response.end();
+
+    var form = new formidable.IncomingForm();
+    form.parse(request, function(error, fields, files){
+        console.log("parsing done");
+
+        fs.rename(files.upload.path, "/tmp/upload.png", function(error){
+            if(error){
+                fs.unlink("/tmp/test.png");
+                fs.rename(files.upload.path, "/tmp/upload.png");
+            }
+        });
+
+        response.writeHead(200, {"Content-Type": "text/html"});
+        response.write("received image: <br/>");
+        response.write("<img src='/show' />");
+        response.end();
+    });
+
 }
 
 function show(response, postData){
     console.log("[ReqHan]Request handler 'show' was called")
-    fs.readFile("/Temp/test.png", "binary", function(error, file){
+    fs.readFile("/tmp/upload.png", "binary", function(error, file){
        if (error){
            response.writeHead(500, {"Content-Type": "text/plain"});
            response.end(error + "\n");
