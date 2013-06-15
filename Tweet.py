@@ -1,4 +1,5 @@
 import os
+import sys
 from twitter import *
 
 CONSUMER_KEY = 'BEgb1u8P1OntD4USkyr8A'
@@ -13,5 +14,8 @@ if not os.path.exists(oauth_filename):
 auth = OAuth(oauth_token, oauth_token_secret, CONSUMER_KEY, CONSUMER_SECRET)
 twitter = Twitter(auth=auth)
 
-twitter.statuses.update(status="Hello World!")
+if not sys.argv[1] == "":
+	twitter.statuses.update(status=sys.argv[1])
+else:
+	print "You need to specify what to Tweet!"
 
