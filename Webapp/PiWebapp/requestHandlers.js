@@ -37,7 +37,7 @@ function upload(response, postData){
     console.log("[ReqHan]Request handler 'upload' was called")
 
     var form = new formidable.IncomingForm();
-    form.parse(request, function(error, fields, files){
+    form.parse(response, function(error, fields, files){
         console.log("parsing done");
 
         fs.rename(files.upload.path, "/tmp/upload.png", function(error){
