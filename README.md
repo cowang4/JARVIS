@@ -5,7 +5,7 @@ The eventual plan is to make an Master application, that would be cross device a
 
 ###Tech/Projects im *Currently* Working On###
 * [Kindle Display for Pi](http://www.ponnuki.net/2012/09/kindleberry-pi/)
-* **Done** Tweeting to Twitter from Pi Python script @JARVISPi
+* **Done** Tweeting to Twitter from Pi Python script [@JARVISPi](https://twitter.com/JARVISPi)
 * Node.js / HTML5 / CSS3 Custom Webserver
     * [Node.js Webserver Doc](http://nodejs.org/api/http.html)
     * [Node.js Tutorial](http://www.nodebeginner.org/#server-side-javascript), I bought the book...
