@@ -15,5 +15,12 @@ handle["/"] = requestHandlers.start;
 handle["/start"] = requestHandlers.start;
 handle["/upload"] = requestHandlers.upload;
 handle["/show"] = requestHandlers.show;
+handle["/jarvis"] = requestHandlers.jarvis;
+handle["/css/ink.css"] = requestHandlers.inkcss;
+handle["/css/quick-start.css"] = requestHandlers.cssquickstart;
+handle["/js/holder.js"] = requestHandlers.jsholder;
+handle["/js/ink.min.js"] = requestHandlers.inkminjs;
+handle["/js/ink-ui.min.js"] = requestHandlers.inkuiminjs;
+handle["/js/autoload.js"] = requestHandlers.autoloadjs;
 
 server.start(router.route, handle);
