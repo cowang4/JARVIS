@@ -9,7 +9,7 @@
 function route(handle, pathname, response, request){
     console.log("[Router]About to route a request for " + pathname);
     if(typeof handle[pathname] === 'function'){
-        return handle[pathname](response, request);
+        return handle[pathname.toLowerCase()](response, request);
     }
     else {
         console.log("[Router]No request handler found for " + pathname);
